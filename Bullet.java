@@ -15,22 +15,22 @@ public class Bullet extends Actor
     int speed = 4;
     
     public static Bullet main;
-    
+    public void move(int speed){
+        setLocation(getX() + speed, getY());
+    }
+    public void Destroyed(){
+        if(getX() >= 699 || isTouching(musuh.class)){
+            removeTouching(musuh.class);
+            getWorld().removeObject(this);
+        }
+        
+    }
     public void act() 
     {
       
         move(speed);
         Destroyed();
-        //checkdouble(i);
-       // end();
        
     } 
-    public void move(int speed){
-        setLocation(getX() + speed, getY());
-    }
-    public void Destroyed(){
-        if(getX() >= 699){
-            getWorld().removeObject(this);
-        }
-    }
+
 }

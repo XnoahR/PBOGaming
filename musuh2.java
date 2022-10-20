@@ -9,8 +9,7 @@ import java.util.*;
 public class musuh2 extends Actor
 {
     
-    public int tahan = 30;
-    private int jeda = 0;
+
     
     public static int randomNumberGenerator(int min, int max){
         Random r = new Random();
@@ -19,14 +18,14 @@ public class musuh2 extends Actor
         return result;
     }
 
-    int speed = randomNumberGenerator(3, 5);
+    int speed = -3;
     public void gerak(int speed){
         setLocation(getX()+speed, getY());
         if(getY()>700){
             setLocation(Greenfoot.getRandomNumber(500), Greenfoot.getRandomNumber(50));
             
         }
-        if(getX()>500){
+        if(getX()>160){
                 getWorld().removeObject(this);
             }
     }
@@ -34,9 +33,7 @@ public class musuh2 extends Actor
     public void act()
     {
         gerak(speed);
-        //kena();
-        if(tahan==0){
-            tahan = 30;
-        }
+ 
+
     }
 }
