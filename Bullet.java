@@ -19,11 +19,20 @@ public class Bullet extends Actor
         setLocation(getX() + speed, getY());
     }
     public void Destroyed(){
-        if(getX() >= 699 || isTouching(musuh.class)){
-            removeTouching(musuh.class);
+        if(getX() >= 699){
             getWorld().removeObject(this);
+        }else{
+            hit();
         }
         
+    }
+    public void hit(){
+        if(isTouching(musuh.class)){
+            MyWorld m = (MyWorld)getWorld();
+            m.addScore(25);
+        
+            removeTouching(musuh.class);
+    }
     }
     public void act() 
     {
