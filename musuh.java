@@ -25,7 +25,7 @@ public class musuh extends Actor
             
         }
         if(getX()<160){
-                Greenfoot.stop();
+                Greenfoot.setWorld(new GameOver());
             }
     }
     

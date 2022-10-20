@@ -7,6 +7,7 @@ public class Character extends Actor
 {
     private int Yspeed = 3;
     private int Xspeed = 3;
+    public int score = 0;
     World world = getWorld();
     public Character(){
     GreenfootImage image = getImage();

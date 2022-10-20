@@ -28,7 +28,7 @@ public class MyWorld extends World
         
         MyWorld bg = new MyWorld();
         
-        if(Greenfoot.getRandomNumber(500) < 1){
+        if(Greenfoot.getRandomNumber(150) < 1){
             //addObject( new carsatu(), Greenfoot.getRandomNumber(200) +200, 0);
             addObject( new musuh(), 700 , Greenfoot.getRandomNumber(200) +200);
             addObject( new musuh2(), 700 , Greenfoot.getRandomNumber(200) +200);
