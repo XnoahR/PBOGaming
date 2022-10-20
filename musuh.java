@@ -6,22 +6,28 @@ import java.util.*;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class boss extends Actor
+public class musuh extends Actor
 {
     
     public int tahan = 30;
     private int jeda = 0;
     
+    public static int randomNumberGenerator(int min, int max){
+    Random r = new Random();
+    double randomNum = r.nextDouble();
+    int result = (int)(randomNum * (max - min)) + min;
+    return result;
+    }
 
-    int speed = 5;
+    int speed = randomNumberGenerator(1, 5);
     public void gerak(int speed){
-        setLocation(getX()+speed, getY());
+        setLocation(getX()-speed, getY());
         if(getY()>700){
             setLocation(Greenfoot.getRandomNumber(500), Greenfoot.getRandomNumber(50));
             
         }
-        if(getX()>500){
-                getWorld().removeObject(this);
+        if(getX()<160){
+                
             }
     }
 

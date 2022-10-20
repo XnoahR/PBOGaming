@@ -29,7 +29,7 @@ public class Bullet extends Actor
         setLocation(getX() + speed, getY());
     }
     public void Destroyed(){
-        if(getX() >= 799){
+        if(getX() >= 699){
             getWorld().removeObject(this);
         }
     }

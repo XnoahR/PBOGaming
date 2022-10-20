@@ -22,13 +22,23 @@ public class Character extends Actor
     
     public void KeyBind(){
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")){
-            if(getX()>=0){
+            if(getX()>=180){
                 setLocation(getX()-Xspeed,getY());
             }
         }
         if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")){
-            if(getX()<=800){
+            if(getX()<=700){
                 setLocation(getX()+Xspeed,getY());
+            }
+        }
+        if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")){
+            if(getY()>=160){
+                setLocation(getX(),getY()-Yspeed);
+            }
+        }
+        if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")){
+            if(getY()<=400){
+                setLocation(getX(),getY()+Yspeed);
             }
         }
         
