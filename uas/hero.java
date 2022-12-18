@@ -19,7 +19,7 @@ public class hero extends Actor
     public int defence;
     
     private int ShotDelay = 0;
-    
+    private int skillDelay = 0;
     hero(){
         this.Yspeed = 2;
         this.Xspeed = 2;
@@ -40,7 +40,7 @@ public class hero extends Actor
     }
     public void act()
     {
-        
+       
     }
     public void end(){
         if(getY()>=599||getY()<=0){
@@ -55,6 +55,13 @@ public class hero extends Actor
     public void Shoot(){
     Fire fireball = new Fire();
     getWorld().addObject(fireball,getX() + 50,getY());
+    ShotDelay = 20 ;
+    }
+    
+    void skill(){
+        Skill bluefire = new Skill();
+        getWorld().addObject(bluefire,getX() + 50,getY());
+        skillDelay = 80;
     }
     
     public void checkKey(){
@@ -84,10 +91,23 @@ public class hero extends Actor
             
             if(ShotDelay == 0){
                 Shoot();
-                ShotDelay = 30;
+                
             }
             
         }
+        
+        if(Greenfoot.isKeyDown("z")){
+            if(skillDelay > 0){
+                skillDelay--;
+            }
+            
+            if(skillDelay == 0){
+                skill();
+                
+            }
+            
+        }
+        
     
     }
     
