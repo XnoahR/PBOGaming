@@ -21,5 +21,6 @@ public class Fire extends Actor
     public void act()
     {
         setLocation(getX() + firespeed, getY());
+        if(
     }
 }

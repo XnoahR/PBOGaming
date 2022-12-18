@@ -18,6 +18,8 @@ public class hero extends Actor
     public int attack;
     public int defence;
     
+    private int ShotDelay = 0;
+    
     hero(){
         this.Yspeed = 2;
         this.Xspeed = 2;
@@ -50,12 +52,11 @@ public class hero extends Actor
             getWorld().removeObject(i);
         }
     }
-    public void melee(){
-        if(isTouching(enemy1.class)){
-            removeTouching(enemy1.class);
+    public void Shoot(){
+    Fire fireball = new Fire();
+    getWorld().addObject(fireball,getX() + 50,getY());
     }
     
-    }
     public void checkKey(){
         if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")){
             if(getX()>=0){
@@ -77,7 +78,14 @@ public class hero extends Actor
         }
         
         if(Greenfoot.isKeyDown("space")){
-            getWorld().addObject(new Fire(),getX(),getY());
+            if(ShotDelay > 0){
+                ShotDelay--;
+            }
+            
+            if(ShotDelay == 0){
+                Shoot();
+                ShotDelay = 30;
+            }
             
         }
     
