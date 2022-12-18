@@ -16,20 +16,14 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1270, 800, 1); 
-        GreenfootImage bg = new GreenfootImage("C:/Users/User/Downloads/SCENE 1_Goji Town.png");
+        super(720, 480, 1); 
+        GreenfootImage bg = new GreenfootImage("C:/Users/LENOVO/Downloads/SCENE 1_Goji Town.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         addObject( new knight1(), 0, 300);
-
         //char1 c = new char1();
         //addObject(c,50,300);
     }
-    public void act(){
-        if(Greenfoot.getRandomNumber(10) < 2){
-            addObject( new enemy1(), 700,602);
-            
-        }
-    }
+
 
 }

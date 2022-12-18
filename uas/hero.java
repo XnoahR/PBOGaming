@@ -13,8 +13,10 @@ public class hero extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    private int Yspeed = 3;
-    private int Xspeed = 3;
+    public int Yspeed = 3;
+    public int Xspeed = 3;
+    public int attack;
+    public int defence;
     
     public void act()
     {
@@ -37,21 +39,21 @@ public class hero extends Actor
     
     }
     public void checkKey(Actor i){
-        if(Greenfoot.isKeyDown("left")){
+        if(Greenfoot.isKeyDown("left") || Greenfoot.isKeyDown("a")){
             if(getX()>=0){
                 setLocation(getX() -2, getY());}
         }
-        if(Greenfoot.isKeyDown("right")){
+        if(Greenfoot.isKeyDown("right") || Greenfoot.isKeyDown("d")){
             if(getX()<=1270){
                 setLocation(getX() +2, getY());}
         }
-        if(Greenfoot.isKeyDown("up")){        
-            if(getY()>=300){
+        if(Greenfoot.isKeyDown("up") || Greenfoot.isKeyDown("w")){        
+            if(getY()>=165){
                 setLocation(getX(), getY()-2);
             }
         }
-        if(Greenfoot.isKeyDown("down")){        
-            if(getY()<=600){
+        if(Greenfoot.isKeyDown("down") || Greenfoot.isKeyDown("s")){        
+            if(getY()<=375){
                 setLocation(getX(), getY()+2);
             }
         }
