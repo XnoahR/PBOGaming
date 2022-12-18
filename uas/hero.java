@@ -30,7 +30,12 @@ public class hero extends Actor
             getWorld().removeObject(i);
         }
     }
+    public void melee(){
+        if(isTouching(enemy1.class)){
+            removeTouching(enemy1.class);
+    }
     
+    }
     public void checkKey(Actor i){
         if(Greenfoot.isKeyDown("left")){
             if(getX()>=0){
@@ -52,4 +57,6 @@ public class hero extends Actor
         }
     
     }
+    
+    
 }

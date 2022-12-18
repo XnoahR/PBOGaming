@@ -21,9 +21,15 @@ public class MyWorld extends World
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
         addObject( new knight1(), 0, 300);
+
         //char1 c = new char1();
         //addObject(c,50,300);
     }
-
+    public void act(){
+        if(Greenfoot.getRandomNumber(10) < 2){
+            addObject( new enemy1(), 700,602);
+            
+        }
+    }
 
 }

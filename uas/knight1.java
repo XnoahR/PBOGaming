@@ -23,7 +23,7 @@ public class knight1 extends hero
         knight1 a = new knight1();
         Actor i = getOneIntersectingObject(knight1.class);
         checkKey(i);
-        
+        melee();
     }
     
 
