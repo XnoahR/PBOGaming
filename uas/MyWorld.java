@@ -20,7 +20,9 @@ public class MyWorld extends World
         GreenfootImage bg = new GreenfootImage("C:/Users/LENOVO/Downloads/SCENE 1_Goji Town.png");
         bg.scale(getWidth(), getHeight());
         setBackground(bg);
-        addObject( new knight1(), 0, 300);
+        sorcerer s = new sorcerer(5,5,70,35);
+        s.SizeSet();
+        addObject( s, 0, 300);
         //char1 c = new char1();
         //addObject(c,50,300);
     }

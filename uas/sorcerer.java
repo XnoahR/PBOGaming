@@ -12,16 +12,29 @@ public class sorcerer extends hero
      * Act - do whatever the sorcerer wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public sorcerer(){
+    sorcerer(){
+       super(); 
+    }
+    
+    sorcerer(int attack,int defence){
+        super(attack,defence);
+    }
+    sorcerer(int Xspeed,int Yspeed,int attack,int defence){
+        super(Xspeed,Yspeed,attack,defence);
+    }
+   
+    
+      void SizeSet(){
         GreenfootImage image = getImage();
         image.scale(64,88); 
     }
+
     public void act()
     {
-        sorcerer s = new sorcerer();
-        s.attack = 75;
-        s.defence = 25;
+        sorcerer a = new sorcerer();
         Actor i = getOneIntersectingObject(sorcerer.class);
-        checkKey(i);
+        checkKey();
     }
+    
+        
 }
