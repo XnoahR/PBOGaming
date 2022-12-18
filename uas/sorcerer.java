@@ -26,7 +26,7 @@ public class sorcerer extends hero
     
       void SizeSet(){
         GreenfootImage image = getImage();
-        image.scale(64,88); 
+        image.scale(120,120); 
     }
 
     public void act()

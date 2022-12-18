@@ -75,6 +75,11 @@ public class hero extends Actor
                 setLocation(getX(), getY()+this.Yspeed);
             }
         }
+        
+        if(Greenfoot.isKeyDown("space")){
+            getWorld().addObject(new Fire(),getX(),getY());
+            
+        }
     
     }
     

@@ -23,6 +23,8 @@ public class MyWorld extends World
         sorcerer s = new sorcerer(5,5,70,35);
         s.SizeSet();
         addObject( s, 0, 300);
+        Fire fireball = new Fire();
+        addObject(fireball,150,300);
         //char1 c = new char1();
         //addObject(c,50,300);
     }
