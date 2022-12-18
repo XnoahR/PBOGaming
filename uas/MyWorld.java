@@ -25,6 +25,9 @@ public class MyWorld extends World
         addObject( s, 0, 300);
         Fire fireball = new Fire();
         addObject(fireball,150,300);
+        reaper1 reaper = new reaper1(10,75,-1);
+        reaper.SizeSet();
+        addObject(reaper,600,300);
         //char1 c = new char1();
         //addObject(c,50,300);
     }

@@ -12,22 +12,22 @@ public class enemy extends Actor
      * Act - do whatever the enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public int attack;
+    public int health;
+    public int movespeed;
     
-    public static int randomNumberGenerator(int min, int max){
-        Random r = new Random();
-        double randomNum = r.nextDouble();
-        int result = (int)(randomNum * (max - min)) + min;
-        return result;
+    enemy(){
+        this.attack = 10;
+        this.health = 100;
+        this.movespeed = 2;
     }
     
-    public void move(int speed){
-        setLocation(getX()+ speed, getY());
-        if(getY()>=300 && getY()<=600){
-            //setLocation(getX()+ speed, getY());
-            setLocation(Greenfoot.getRandomNumber(500), Greenfoot.getRandomNumber(300));
-            
-        }
+    enemy(int attack,int health,int movespeed){
+        this.attack = attack;
+        this.health = health;
+        this.movespeed = movespeed;
     }
+    
     
     public void act()
     {
