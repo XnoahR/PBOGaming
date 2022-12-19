@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=hero
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ hero\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=hero()
+comment2.params=attack\ defence
+comment2.target=hero(int,\ int)
+comment3.params=Yspeed\ Xspeed\ attack\ defence
+comment3.target=hero(int,\ int,\ int,\ int)
+comment4.params=
+comment4.target=void\ act()
+comment5.params=
+comment5.target=void\ end()
+comment6.params=i
+comment6.target=void\ checkdouble(greenfoot.Actor)
+comment7.params=
+comment7.target=void\ Shoot()
+comment8.params=
+comment8.target=void\ skill()
+comment9.params=
+comment9.target=void\ checkKey()
+numComments=10
