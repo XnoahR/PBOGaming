@@ -14,20 +14,30 @@ public class enemy extends Actor
      */
     public int attack;
     public int health;
-    public int movespeed;
+    public double movespeed;
+    
+    public static int randomNumberGenerator(int min, int max){
+        Random r = new Random();
+        double randomNum = r.nextDouble();
+        int result = (int)(randomNum * (max - min)) + min;
+        return result;
+    }
     
     enemy(){
         this.attack = 10;
         this.health = 100;
-        this.movespeed = 2;
+        this.movespeed = -1;
     }
     
-    enemy(int attack,int health,int movespeed){
+    enemy(int attack,int health,double movespeed){
         this.attack = attack;
         this.health = health;
         this.movespeed = movespeed;
     }
     
+    void shot(){
+        
+    }
     
     public void act()
     {

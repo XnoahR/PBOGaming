@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=golem1
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ golem1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=golem1()
+comment2.params=attack\ health\ movespeed
+comment2.target=golem1(int,\ int,\ double)
+comment3.params=
+comment3.target=void\ SizeSet()
+comment4.params=
+comment4.target=void\ act()
+numComments=5
